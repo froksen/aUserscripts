@@ -4,7 +4,7 @@ Tampermonkey/Greasemonkey userscripts for AULA (communication platform).
 
 ALL USE AT OWN RISK.
 
-## DESCRIPTION (DA) 
+## BESKRIVELSE 
 På denne side vil du kunne finde såkaldte userscripts til chromeudvidelsen Tampermonkey. Disse scripts tilføjer ekstra funktioner til AULA, som der er fundet relevant. 
 
 AL BRUG SKER PÅ EGET ANSVAR.
