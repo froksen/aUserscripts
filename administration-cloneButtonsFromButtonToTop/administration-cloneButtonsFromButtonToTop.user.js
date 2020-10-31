@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         AULA - Administration - Når en gruppefane er åben, da klon knapperne fra bunden til toppen.
+// @name         AULA - Administration - Klon knapper fra bunden til toppen.
 // @namespace
 // @version      0.0.2
-// @description  Kloner knapperne fra bunden af dialogen til op i toppen, så de er begge steder.
+// @description  Når en gruppefane er åben, da klon knapperne fra bunden til toppen.
 // @author       Ole Frandsen
 
 // @include      https://www.aula.dk/administration/*

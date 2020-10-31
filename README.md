@@ -34,3 +34,6 @@ AL BRUG SKER PÅ EGET ANSVAR.
 **Beskrivelse:** Information om gruppemedlemmer af vise grupper udtrækkes til en CSV-fil.<br>
 **UserScript:** [administration-exportGroupmembersToCsv](https://github.com/froksen/aUserscripts/raw/main/administration-exportGroupmembersToCsv/administration-exportGroupmembersToCsv.user.js)
 
+#### administration-cloneButtonsFromButtonToTop
+**Beskrivelse:** Når en gruppefane er åben, da klon knapperne fra bunden til toppen.<br>
+**UserScript:** [administration-cloneButtonsFromButtonToTop](https://github.com/froksen/aUserscripts/raw/main/administration-cloneButtonsFromButtonToTop/administration-cloneButtonsFromButtonToTop.user.js)
