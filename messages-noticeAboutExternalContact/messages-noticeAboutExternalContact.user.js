@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         AULA - beskeder - Gør opmærksom på eksterne personer i beskeder
+// @name         AULA - Beskeder - Gør opmærksom på eksterne personer i beskeder
 // @namespace
 // @version      0.5.1
 // @description  Gør opmærksom på, at der er eksterne kontakter i beskeder f.eks. forældre.

@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         AULA - kalender - Eksporter kalenderbegivenhed til ICS
+// @name         AULA - Kalender - Eksporter kalenderbegivenhed til ICS
 // @namespace
 // @version      0.4.1
 // @description  Eksporter en kalenderbegivenhed fra AULAS calender til en ICS/Outlook
