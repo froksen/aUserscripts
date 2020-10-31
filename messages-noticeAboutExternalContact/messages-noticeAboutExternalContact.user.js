@@ -13,3 +13,5 @@
 
  //@downloadURL   https://raw.githubusercontent.com/froksen/aUserscripts/main/messages-noticeAboutExternalContact/messages-noticeAboutExternalContact.user.js
  //@updateURL     https://raw.githubusercontent.com/froksen/aUserscripts/main/messages-noticeAboutExternalContact/messages-noticeAboutExternalContact.user.js
+
+ // ==/UserScript==
