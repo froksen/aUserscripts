@@ -30,3 +30,7 @@ AL BRUG SKER PÅ EGET ANSVAR.
 **Beskrivelse:** Tilføjer knappen "Fjern alle brugere" til bruger administrationen<br>
 **UserScript:** [administration-removeExistingUsersInGroups](https://github.com/froksen/aUserscripts/raw/main/administration-removeExistingUsersInGroups/administration-removeExistingUsersInGroups.user.js)
 
+#### Eksporter gruppemedlemmer til CSV
+**Beskrivelse:** Information om gruppemedlemmer af vise grupper udtrækkes til en CSV-fil.<br>
+**UserScript:** [administration-exportGroupmembersToCsv](https://github.com/froksen/aUserscripts/raw/main/administration-exportGroupmembersToCsv/administration-exportGroupmembersToCsv.user.js)
+
