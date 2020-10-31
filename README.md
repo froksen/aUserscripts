@@ -25,3 +25,8 @@ AL BRUG SKER PÅ EGET ANSVAR.
 **Beskrivelse:** Du kan eksporter en begivenhed fra AULA´s kalender til en ICS-fil (Outlook-kalenderfil), som så kan åbnes med en kalender f.eks. Outlook og derved få begivenheden over i en anden kalender.<br>
 **UserScript:** [calender-exportToOutlook](https://github.com/froksen/aUserscripts/raw/main/calender-exportToOutlook/calendar-exportToOutlook.user.js)
 
+### ADMINISTRATIONSMODUL
+#### Fjern alle eksisterende brugere
+**Beskrivelse:** Tilføjer knappen "Fjern alle brugere" til bruger administrationen<br>
+**UserScript:** [administration-removeExistingUsersInGroups](https://github.com/froksen/aUserscripts/raw/main/administration-removeExistingUsersInGroups/administration-removeExistingUsersInGroups.user.js)
+
