@@ -9,7 +9,7 @@
 // @require http://code.jquery.com/jquery-latest.js
 // @require  https://gist.github.com/raw/2625891/waitForKeyElements.js
 
- //@require       https://raw.githubusercontent.com/froksen/aUserscripts/main/calender-exportToOutlook/calendar-exportToOutlook.js
+ //@require       https://raw.githubusercontent.com/froksen/aUserscripts/main/messages-noticeAboutExternalContact/messages-noticeAboutExternalContact.js
 
- //@downloadURL   https://raw.githubusercontent.com/froksen/aUserscripts/main/calender-exportToOutlook/calendar-exportToOutlook.user.js
- //@updateURL     https://raw.githubusercontent.com/froksen/aUserscripts/main/calender-exportToOutlook/calendar-exportToOutlook.user.js
+ //@downloadURL   https://raw.githubusercontent.com/froksen/aUserscripts/main/messages-noticeAboutExternalContact/messages-noticeAboutExternalContact.user.js
+ //@updateURL     https://raw.githubusercontent.com/froksen/aUserscripts/main/messages-noticeAboutExternalContact/messages-noticeAboutExternalContact.user.js
