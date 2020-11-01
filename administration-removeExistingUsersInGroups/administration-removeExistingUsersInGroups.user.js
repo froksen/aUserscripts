@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Administration - Fjern alle eksisterende brugere
 // @namespace
-// @version      0.11
+// @version      0.1
 // @description  Tilføjer knappen "Fjern alle brugere" til bruger administrationen
 // @author       Ole Frandsen
 

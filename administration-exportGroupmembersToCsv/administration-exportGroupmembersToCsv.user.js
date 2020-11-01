@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Administration - Eksporter gruppedata til CSV
 // @namespace    
-// @version      0.3
+// @version      0.1
 // @description  
 // @author       You
 // @match        https://www.aula.dk/administration/*

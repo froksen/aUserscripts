@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Beskeder - Indsæt signatur
 // @namespace
-// @version      0.0.5
+// @version      0.1
 // @description  Indsætter en simpel signatur som standard i beskeder.
 // @author       Ole Frandsen
 

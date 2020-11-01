@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Administration - Klon knapper fra bunden til toppen.
 // @namespace
-// @version      0.0.2
+// @version      0.1
 // @description  Når en gruppefane er åben, da klon knapperne fra bunden til toppen.
 // @author       Ole Frandsen
 
