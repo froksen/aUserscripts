@@ -62,7 +62,9 @@ var debugMode = false;
 
 
             var isExternal = true;
-            var internalTitles = ['fysioterapeut','pædagogmedhjælper','skolepædagog','afdelingsleder',"lærer", "medarbejder", "leder",'pædagog',"ledelse",'teknisk/praktisk','lærervikar','vikar','afd.leder','skolesekretær','souschef','TAP','skoleleder','pædagogisk','pædagogiskassistent']; //OBS: Bemærk, at der må ikke være mellemrum i stillingsbetegnelser f.eks. afd.<mellemrum>leder = afd.leder
+             //OBS: Bemærk, at der må ikke være mellemrum i stillingsbetegnelser f.eks. afd.<mellemrum>leder = afd.leder
+             //Stillingsbetegnelser skal være skrevet med småt (lowercase)
+            var internalTitles = ['tab','fysioterapeut','pædagogmedhjælper','skolepædagog','afdelingsleder',"lærer", "medarbejder", "leder",'pædagog',"ledelse",'teknisk/praktisk','lærervikar','vikar','afd.leder','skolesekretær','souschef','TAP','skoleleder','pædagogisk','pædagogiskassistent'];
 
             var subscriberTitles_split = subscriberTitles.toLowerCase().split(",");
 
