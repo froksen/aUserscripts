@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Beskeder - Gør opmærksom på eksterne personer i beskeder
 // @namespace
-// @version      0.1
+// @version      0.2
 // @description  Gør opmærksom på, at der er eksterne kontakter i beskeder f.eks. forældre.
 // @author       Ole Frandsen (OF)
 // @match        https://www.aula.dk/portal/*
