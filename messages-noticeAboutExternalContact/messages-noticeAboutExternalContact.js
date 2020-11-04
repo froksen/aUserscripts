@@ -21,7 +21,7 @@ var debugMode = false;
 
         setTimeout(function(){
           clickUparrow();
-       }, 1000);
+       }, 500);
 
     }
 
@@ -45,7 +45,7 @@ var debugMode = false;
         }
 
         jNode.append("<br>");
-        jNode.append('<span id="hasExternalNote" style="background-color:yellow">OBS: Der er eksterne samarbejdspartnere på denne besked f.eks. forældre eller elever.</span>');
+        jNode.append('<span id="hasExternalNote" style="background-color:yellow"><b>OBS:</b> Beskedtråden indeholder eksterne samarbejdspartnere f.eks. forældre eller elever.</span>');
 
       //jNode.css("background-color", "yellow");
     }
