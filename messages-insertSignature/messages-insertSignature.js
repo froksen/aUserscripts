@@ -141,9 +141,10 @@
 
     function insertAutomaticSignatureOnNewMessage(jNode)
     {
-        //Så signaturen kun laves ved nye beskeder.
-        if(window.location.href != "https://www.aula.dk/portal/#/beskeder/opret")
+        //Så signaturen kun laves ved nye beskeder eller videresendte beskeder.
+        if(window.location.href != "https://www.aula.dk/portal/#/beskeder/opret" && window.location.href.indexOf("/beskeder/videresend/") < 0)
         {
+            console.log("IKKE NY BESKED ELLER VIDERESENDT BESKED");
             return;
         }
 
@@ -155,7 +156,7 @@
 
     function insertAutomaticSignatureOnReply(jNode)
     {
-        //Så signaturen kun laves ved nye beskeder.
+        //Så signaturen ikke indsættes ved nye beskeder, men kun ved videresendte. 
         if(window.location.href == "https://www.aula.dk/portal/#/beskeder/opret")
         {
             return;
