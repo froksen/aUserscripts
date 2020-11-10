@@ -20,6 +20,10 @@ AL BRUG SKER PÅ EGET ANSVAR.
 **Beskrivelse:** Muliggør at lave en automatisk signatur i AULAs besked system.<br>
 **UserScript:** [messages-insertSignature](https://github.com/froksen/aUserscripts/raw/main/messages-insertSignature/messages-insertSignature.user.js)
 
+#### Påmindelse om besked (Outlook)
+**Beskrivelse:** Laver en Outlook/ICS-fil som kan minde en om at f.eks. besvare en besked på AULA.<br>
+**UserScript:** [messages-remindMeOutlook](https://github.com/froksen/aUserscripts/raw/main/messages-remindMeOutlook/messages-remindMeOutlook.user.js)
+
 ### KALENDER
 #### Eksporter til Outlook
 **Beskrivelse:** Du kan eksporter en begivenhed fra AULA´s kalender til en ICS-fil (Outlook-kalenderfil), som så kan åbnes med en kalender f.eks. Outlook og derved få begivenheden over i en anden kalender.<br>
