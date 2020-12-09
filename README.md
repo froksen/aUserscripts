@@ -27,7 +27,7 @@ AL BRUG SKER PÅ EGET ANSVAR.
 
 #### Favoritmodtagere 
 **Beskrivelse:** ør det let at sende en besked til en typisk modtager.<br>
-**UserScript:** [messages-favorites](https://github.com/froksen/aUserscripts/raw/main/messages-favorites/messages-favorites.user.js)
+**UserScript:** [messages-favorites](https://github.com/froksen/aUserscripts/raw/main/messages-favorites/messages-favorits.user.js)
 
 #### Påmindelse om besked (Outlook)
 **Beskrivelse:** Laver en Outlook/ICS-fil som kan minde en om at f.eks. besvare en besked på AULA.<br>
