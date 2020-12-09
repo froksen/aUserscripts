@@ -9,6 +9,11 @@ På denne side vil du kunne finde såkaldte userscripts til chromeudvidelsen Tam
 
 AL BRUG SKER PÅ EGET ANSVAR.
 
+**Video omkring installation og beskrivelse**
+
+[![Se video omkring installation og beskrivelse](https://img.youtube.com/vi/wlWDKZit988/hqdefault.jpg)](https://youtu.be/wlWDKZit988)
+
+
 ## SCRIPS og beskrivelse
 
 ### BESKEDER
