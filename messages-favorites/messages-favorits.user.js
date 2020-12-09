@@ -15,3 +15,5 @@
 
  //@downloadURL   https://github.com/froksen/aUserscripts/raw/main/messages-favorites/messages-favorites.user.js
  //@updateURL     https://github.com/froksen/aUserscripts/raw/main/messages-favorites/messages-favorites.user.js
+
+  // ==/UserScript==
