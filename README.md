@@ -20,6 +20,10 @@ AL BRUG SKER PÅ EGET ANSVAR.
 **Beskrivelse:** Muliggør at lave en automatisk signatur i AULAs besked system.<br>
 **UserScript:** [messages-insertSignature](https://github.com/froksen/aUserscripts/raw/main/messages-insertSignature/messages-insertSignature.user.js)
 
+#### Favoritmodtagere 
+**Beskrivelse:** ør det let at sende en besked til en typisk modtager.<br>
+**UserScript:** [messages-favorites](https://github.com/froksen/aUserscripts/raw/main/messages-favorites/messages-favorites.user.js)
+
 #### Påmindelse om besked (Outlook)
 **Beskrivelse:** Laver en Outlook/ICS-fil som kan minde en om at f.eks. besvare en besked på AULA.<br>
 **UserScript:** [messages-remindMeOutlook](https://github.com/froksen/aUserscripts/raw/main/messages-remindMeOutlook/messages-remindMeOutlook.user.js)
