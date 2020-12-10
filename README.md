@@ -26,7 +26,7 @@ AL BRUG SKER PÅ EGET ANSVAR.
 **UserScript:** [messages-insertSignature](https://github.com/froksen/aUserscripts/raw/main/messages-insertSignature/messages-insertSignature.user.js)
 
 #### Favoritmodtagere 
-**Beskrivelse:** ør det let at sende en besked til en typisk modtager.<br>
+**Beskrivelse:** Gør det let at sende en besked til en typisk modtager.<br>
 **UserScript:** [messages-favorites](https://github.com/froksen/aUserscripts/raw/main/messages-favorites/messages-favorits.user.js)
 
 #### Påmindelse om besked (Outlook)
