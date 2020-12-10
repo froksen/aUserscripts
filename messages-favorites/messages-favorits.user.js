@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Beskeder - Favoritmodtager
 // @namespace
-// @version      0.1
+// @version      0.2
 // @description  Gør det let at sende en besked til en typisk modtager.
 // @author       Ole Frandsen (OF)
 // @match        https://www.aula.dk/portal/*

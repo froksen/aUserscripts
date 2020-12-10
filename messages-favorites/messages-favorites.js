@@ -124,14 +124,18 @@
     TargetInput.focus();
       setTimeout(function(){
         TargetInput.dispatchEvent(event);
-      },100)
+      },100);
 
-      waitForKeyElements (
+      setTimeout(function(){
+        $("li.el-select-dropdown__item:first").click();
+      },1000);
+
+      /*waitForKeyElements (
         "li.el-select-dropdown__item",
           function(){
             $("li.el-select-dropdown__item:first").click()
           }
-        );
+        );*/
       
     }
 
