@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Beskeder - Hurtige beskeder
 // @namespace
-// @version      0.1
+// @version      0.2
 // @description  Gør det let at sende en hurtig/standard besked.
 // @author       Ole Frandsen (OF)
 // @match        https://www.aula.dk/portal/*

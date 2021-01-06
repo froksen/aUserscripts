@@ -49,7 +49,7 @@
       });
 
       //Appends the header for favorits
-      $(".aula-search-outer").append('<label class="collapsible">Hurtige svar >></label>');
+      $(".editor-container").prepend('<label class="collapsibleQuickmessages">Hurtige svar >></label>');
 
       //Loops through and create each favorits button
       $.each( favorits, function( index, favorit ){
@@ -58,7 +58,7 @@
       });
 
       //Create Collapse function
-      var coll = document.getElementsByClassName("collapsible");
+      var coll = document.getElementsByClassName("collapsibleQuickmessages");
       var i;
       
       for (i = 0; i < coll.length; i++) {
@@ -79,7 +79,7 @@
       }
 
       //Makes sure that favorits are hidden as default
-      $(".collapsible").click().click();
+      $(".collapsibleQuickmessages").click().click();
     }
 
     function createFavoritButton(index,favname){
@@ -87,7 +87,7 @@
       //console.log("Creating favButton for " + favname);
       
       //Creating favorit button
-      $(".aula-search-outer").append('<ul style="list-style-type:none;"><li class="el-select-group__title quickmessage" id="quickmessage_'+index.toString()+'">'+favname+'</li></ul>');
+      $('<ul style="list-style-type:none;"><li class="el-select-group__title quickmessage" id="quickmessage_'+index.toString()+'">'+favname+'</li></ul>').insertAfter(".collapsibleQuickmessages");
 
       //Adds click event
       $('#quickmessage_'+index.toString()).on("click",function(){
