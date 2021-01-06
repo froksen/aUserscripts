@@ -17,6 +17,10 @@ AL BRUG SKER PÅ EGET ANSVAR.
 ## SCRIPS og beskrivelse
 
 ### BESKEDER
+#### Hurtige beskeder
+**Beskrivelse:** Mulighed for at formulere nogle hurtige/standard sætninger som kan indsættes i beskedfeltet.<br>
+**UserScript:** [messages-quickmessages](https://github.com/froksen/aUserscripts/raw/main/messages-quickmessages/messages-quickmessages.user.js)
+
 #### Gør opmærksom på eksterne personer
 **Beskrivelse:** Hvis der er ikke-interne (eksterne) personer på en besked, da gives der en notits herom.<br>
 **UserScript:** [messages-noticeAboutExternalContact](https://github.com/froksen/aUserscripts/raw/main/messages-noticeAboutExternalContact/messages-noticeAboutExternalContact.user.js)
