@@ -138,12 +138,12 @@
 
       
       //Opretter dialogen
-      $("main").append('<div id="quickmessages_dialog" title="Favoritter"><br></div>');
+      $("main").append('<div id="quickmessages_dialog" title="Hurtige svar"><br></div>');
 
       //Upload området
-      $("#quickmessages_dialog").append('<label for="quickmessages_dialog_input">Skriv dine favoritter</label><br>');
+      $("#quickmessages_dialog").append('<label for="quickmessages_dialog_input">Skriv dine hurtige svar</label><br>');
       $("#quickmessages_dialog").append('<input id="quickmessages_dialog_input" style="width: 100%;" type="text"><br>');
-      $("#quickmessages_dialog").append('<p>SYNTAKS: fornavnA efternavnA, fornavnB efternavnB osv.</p>');
+      $("#quickmessages_dialog").append('<p>SYNTAKS: Hurtig svar 1, hurtigt svar 2 osv.</p>');
 
         //Dialog indstillinger
         dialog = $( "#quickmessages_dialog" ).dialog({
