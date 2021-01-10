@@ -8,18 +8,19 @@
     addButtons
     );
 
-    waitForKeyElements (
+    /*waitForKeyElements (
       ".messages-toolbar",
       addMenuButton
-      );
+      );*/
 
     function addMenuButton()
     {
       createDialog();
+      //$(".editor-container").prepend('<label class="collapsibleQuickmessages">Hurtige svar >></label>');
 
+      //$(".messages-toolbar").find("ul").eq(0).append('<li class="nav-item"><button id="changeQuickmessages" class="btn large btn-link""><span data-v-8b7c5970="" aria-hidden="true"><i data-v-8b7c5970="" class="icon icon-Aula_settings"></i>Tilpas Hurtige svar</span></button></li>');
+      $(".editor-container").prepend('<button id="changeQuickmessages" class="btn large btn-link"" title="Tilpas hurtige svar"><span data-v-8b7c5970="" aria-hidden="true"><i data-v-8b7c5970="" class="icon icon-Aula_settings"> </i></span></button>');
 
-      $(".messages-toolbar").find("ul").eq(0).append('<li class="nav-item"><button id="changeQuickmessages" class="btn large btn-link""><span data-v-8b7c5970="" aria-hidden="true"><i data-v-8b7c5970="" class="icon icon-Aula_settings"></i>Tilpas Hurtige svar</span></button></li>');
-      
       $("#changeQuickmessages").button().on( "click", function() {
         var farvorits = GM_getValue("aula_user_quickmessages","Tak for beskeden jeg svarer tilbage hurtigst muligt., Tak for din besked jeg undersøger sagen og vender tilbage.");
         $("#quickmessages_dialog_input").val(farvorits);
@@ -80,6 +81,8 @@
 
       //Makes sure that favorits are hidden as default
       $(".collapsibleQuickmessages").click().click();
+
+      addMenuButton();
     }
 
     function createFavoritButton(index,favname){
