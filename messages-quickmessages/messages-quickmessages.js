@@ -8,6 +8,11 @@
     addButtons
     );
 
+    waitForKeyElements (
+      "#replyMessageBox_ifr",
+      addButtons
+      );
+
     /*waitForKeyElements (
       ".messages-toolbar",
       addMenuButton
@@ -51,6 +56,9 @@
 
       //Appends the header for favorits
       $(".editor-container").prepend('<label class="collapsibleQuickmessages">Hurtige svar >></label>');
+
+
+          //$('<label class="collapsibleQuickmessages">Hurtige svar >></label>').insertAfter("message-textarea");
 
       //Loops through and create each favorits button
       $.each( favorits, function( index, favorit ){
