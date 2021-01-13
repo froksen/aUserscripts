@@ -4,7 +4,7 @@
     
     //When pop is present
    waitForKeyElements (
-    ".aula-search-outer",
+    ".aula-search",
     addButtons
     );
 
@@ -40,6 +40,12 @@
 
     function createFavoritsButtons()
     {
+      //Checks if element already exists. Makes sure only one instance of this element is present. 
+      if ( $( ".collapsible" ).length) {
+        console.log(".collapsible already exists. Skipping.")
+        return;
+      }
+
       //Lists favorits. Gets from External ressource 
       var savedFavorits =  GM_getValue("aula_user_favorits","fornavnA efternavnA, fornavnB efternavnB").split(","); 
 
