@@ -8,23 +8,27 @@
     addButtons
     );
 
-    waitForKeyElements (
+    /*waitForKeyElements (
       ".messages-toolbar",
       addMenuButton
-      );
+      );*/
 
     function addMenuButton()
     {
       createDialog();
 
 
-      $(".messages-toolbar").find("ul").eq(0).append('<li class="nav-item"><button id="changeFavorits" class="btn large btn-link""><span data-v-8b7c5970="" aria-hidden="true"><i data-v-8b7c5970="" class="icon icon-Aula_settings"></i>Tilpas favoritter</span></button></li>');
-      
+      /*$(".messages-toolbar").find("ul").eq(0).append('<li class="nav-item"><button id="changeFavorits" class="btn large btn-link""><span data-v-8b7c5970="" aria-hidden="true"><i data-v-8b7c5970="" class="icon icon-Aula_settings"></i>Tilpas favoritter</span></button></li>');
+      */
+     $("label.collapsible").prepend('<button id="changeFavorits" class="btn large btn-link"" title="Tilpas Favoritter"><span data-v-8b7c5970="" aria-hidden="true"><i data-v-8b7c5970="" class="icon icon-Aula_settings"> </i></span></button>');
+
       $("#changeFavorits").button().on( "click", function() {
         var farvorits = GM_getValue("aula_user_favorits","fornavnA efternavnA, fornavnB efternavnB");
         $("#favorits_dialog").val(farvorits);
         dialog.dialog( "open" );
     });
+
+
     
     }
 
@@ -85,6 +89,10 @@
 
       //Makes sure that favorits are hidden as default
       $(".collapsible").click().click();
+
+      //Adds gear/settings icon and dialog
+      addMenuButton();
+
     }
 
     function createFavoritButton(index,favname){
