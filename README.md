@@ -16,6 +16,10 @@ AL BRUG SKER PÅ EGET ANSVAR.
 
 ## SCRIPS og beskrivelse
 
+### OVERBLIK
+**Beskrivelse:** Gør overskrifter på overblikket klikbare<br>
+**UserScript:** [dashboard-postHeaderAsLink](https://github.com/froksen/aUserscripts/raw/main/dashboard-postHeaderAsLink/dashboard-postHeaderAsLink.user.js)
+
 ### BESKEDER
 #### Hurtige beskeder
 **Beskrivelse:** Mulighed for at formulere nogle hurtige/standard sætninger som kan indsættes i beskedfeltet.<br>
