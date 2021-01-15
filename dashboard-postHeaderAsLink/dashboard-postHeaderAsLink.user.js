@@ -11,7 +11,7 @@
 // @grant   GM_getValue
 // @grant   GM_setValue
 
- //@require       https://github.com/froksen/aUserscripts/raw/main//dashboard-postHeaderAsLink/dashboard-postHeaderAsLink.user.js
+ //@require       https://github.com/froksen/aUserscripts/raw/main//dashboard-postHeaderAsLink/dashboard-postHeaderAsLink.js
 
  //@downloadURL   https://github.com/froksen/aUserscripts/raw/main/dashboard-postHeaderAsLink/dashboard-postHeaderAsLink.user.js
  //@updateURL     https://github.com/froksen/aUserscripts/raw/main/dashboard-postHeaderAsLink/dashboard-postHeaderAsLink.user.js
