@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Overblik - Opslagsoverskrift som link
 // @namespace
-// @version      0.2
+// @version      0.3
 // @description  Gør overskriften i et opslag klikbar. 
 // @author       Ole Frandsen (OF)
 // @match        https://www.aula.dk/portal/*
