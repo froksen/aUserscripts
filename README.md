@@ -43,6 +43,7 @@ AL BRUG SKER PÅ EGET ANSVAR.
 
 ### KALENDER
 #### Eksporter til Outlook
+**NOTE:** Denne funktion vil ikke længere blive opdateret. Denne funktion er ikke længere relevant i større grad, da AULA har tilføjet mulighed for at abonnere på kalender via f.eks. Outlook. 
 **Beskrivelse:** Du kan eksporter en begivenhed fra AULA´s kalender til en ICS-fil (Outlook-kalenderfil), som så kan åbnes med en kalender f.eks. Outlook og derved få begivenheden over i en anden kalender.<br>
 **UserScript:** [calender-exportToOutlook](https://github.com/froksen/aUserscripts/raw/main/calender-exportToOutlook/calendar-exportToOutlook.user.js)
 
