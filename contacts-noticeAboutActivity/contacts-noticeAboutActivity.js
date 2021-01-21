@@ -53,7 +53,7 @@ var debugMode = true;
                 if(lastActivityIsTooLongAgo)
                 {
                    // console.log("Det er mere end 2 mdr siden personen var på AULA.");
-                    $(this).append('<span id="" style="background-color:yellow"><b>OBS:</b> Det er mere end 2 mdr siden samarbejdspartneren har været aktiv på AULA.</span>');
+                    $(this).append('<span id="" style="background-color:yellow"><b>OBS:</b> Det er mere end 2 mdr siden samarbejdspartneren har været aktiv på AULA.</span><br>');
 
                 }
 
