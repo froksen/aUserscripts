@@ -17,8 +17,18 @@ AL BRUG SKER PÅ EGET ANSVAR.
 ## SCRIPS og beskrivelse
 
 ### OVERBLIK
+#### Linkbare overskrifter
 **Beskrivelse:** Gør overskrifter på overblikket klikbare<br>
 **UserScript:** [dashboard-postHeaderAsLink](https://github.com/froksen/aUserscripts/raw/main/dashboard-postHeaderAsLink/dashboard-postHeaderAsLink.user.js)
+
+### KONTAKTER
+#### Person uden forældremyndighed
+**Beskrivelse:** Gør opmærsom på, hvis du slår en kontakt op der ikke har forældremyndighed<br>
+**UserScript:** [contacts-noticeAboutCustody](https://github.com/froksen/aUserscripts/raw/main/contacts-noticeAboutCustody/contacts-noticeAboutCustody.user.js)
+
+#### Person har været inaktiv i længere periode
+**Beskrivelse:** Gør opmærksom på, hvis en kontakt har været inaktiv i en længere periode (pt 2 mdr)<br>
+**UserScript:** [contacts-noticeAboutActivity](https://github.com/froksen/aUserscripts/raw/main/contacts-noticeAboutActivity/contacts-noticeAboutActivity.user.js)
 
 ### BESKEDER
 #### Hurtige beskeder
