@@ -9,7 +9,7 @@ var debugMode = true;
     }*/
 
     //Venter på elementet bliver synligt, og når synligt afvikler funktionen
-    waitForKeyElements(".aula-profile-container",highlightActivity);
+    waitForKeyElements(".contact-info-title",highlightActivity);
 
     function highlightActivity()
     {
