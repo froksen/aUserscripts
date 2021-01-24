@@ -3,20 +3,11 @@ var debugMode = true;
 (function() {
     'use strict';
 
-    var hasRun = false;
-
     //Venter på elementet bliver synligt, og når synligt afvikler funktionen
     waitForKeyElements(".profile-header",highlightActivity);
 
     function highlightActivity()
     {
-        if(hasRun)
-        {
-            return;
-        }
-
-        hasRun = true;
-
 
         setTimeout(
             function(){

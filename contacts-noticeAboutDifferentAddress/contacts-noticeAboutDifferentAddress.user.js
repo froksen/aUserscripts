@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Kontakter - Forskellig adresser
 // @namespace
-// @version      0.1
+// @version      0.2
 // @description  Gør opmærksom på hvis personer har forskellige adresser
 // @author       Ole Frandsen (OF)
 // @match        https://www.aula.dk/portal/*
