@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Kontakter - Gør opmærksom på hvis en person ikke har forældremyndighed
 // @namespace
-// @version      0.1
+// @version      0.2
 // @description  Gør opmærksom på hvis en person ikke har forældremyndighed
 // @author       Ole Frandsen (OF)
 // @match        https://www.aula.dk/portal/*

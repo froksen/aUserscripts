@@ -13,6 +13,7 @@ var debugMode = true;
 
     function highlightActivity()
     {
+
         setTimeout(
             function(){
                 //Finds all user profiles
@@ -34,20 +35,21 @@ var debugMode = true;
                         if(custodyInformation.toLowerCase() == "ja")
                         {
                             hasCustody = true;
+                            $(this).css('background-color:green');
                         }
+                        else
+                        {
+                            $(this).css('background-color:red');
+                        }
+
+
                      }
 
                 })
 
-                //Print out information to user. 
-                if(!hasCustody)
-                {
-                    $(this).append('<span id="" style="background-color:yellow"><b>OBS:</b> Personen har ikke forældremyndighed!</span><br>');
-
-                }
-
-                    //console.log( index + ": " + $( this ).text() );
                 })
+
+
               },2000);
     }
 
