@@ -28,7 +28,7 @@ var debugMode = true;
 
                         //Information about last activity
                         var lastActivity = $(this).text().split(":")[1];
-                        var lastActivityDay = lastActivity.split(" ")[0].replace(".","");
+                        var lastActivityDay = lastActivity.split(" ")[0].replace(".","").trim();
                         var lastActivityMonth = lastActivity.split(" ")[1];
 
                         //AULA MonthNames
@@ -36,6 +36,9 @@ var debugMode = true;
                         
                         //Gets current date
                         var currentDate = new Date();
+                        console.log("lastActivityDay: " + lastActivityDay);
+                        console.log("currentDay: " + currentDate.Date());
+                        console.log("DIFF: " + lastActivityDay-currentDate.Date());
 
                         //Finds diff
                         //var dateDiff = currentDate.getMonth() - monthNames.indexOf(lastActivityMonth);
