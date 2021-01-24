@@ -22,11 +22,15 @@ AL BRUG SKER PÅ EGET ANSVAR.
 **UserScript:** [dashboard-postHeaderAsLink](https://github.com/froksen/aUserscripts/raw/main/dashboard-postHeaderAsLink/dashboard-postHeaderAsLink.user.js)
 
 ### KONTAKTER
-#### Person uden forældremyndighed
+#### Personerne har forskellige adresser
+**Beskrivelse:** Gør opmærsom på, hvis du slår en kontakt op og personerne på opslaget har forskellige adresser.<br>
+**UserScript:** [contacts-noticeAboutDifferentAddress](https://github.com/froksen/aUserscripts/raw/main/contacts-noticeAboutDifferentAddress/contacts-noticeAboutDifferentAddress.user.js)
+
+#### Personen uden forældremyndighed
 **Beskrivelse:** Gør opmærsom på, hvis du slår en kontakt op der ikke har forældremyndighed<br>
 **UserScript:** [contacts-noticeAboutCustody](https://github.com/froksen/aUserscripts/raw/main/contacts-noticeAboutCustody/contacts-noticeAboutCustody.user.js)
 
-#### Person har været inaktiv i længere periode
+#### Personen har været inaktiv i længere periode
 **Beskrivelse:** Gør opmærksom på, hvis en kontakt har været inaktiv i en længere periode (pt 2 mdr)<br>
 **UserScript:** [contacts-noticeAboutActivity](https://github.com/froksen/aUserscripts/raw/main/contacts-noticeAboutActivity/contacts-noticeAboutActivity.user.js)
 
