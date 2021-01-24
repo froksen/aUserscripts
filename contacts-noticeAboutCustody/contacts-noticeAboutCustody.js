@@ -35,11 +35,12 @@ var debugMode = true;
                         if(custodyInformation.toLowerCase() == "ja")
                         {
                             hasCustody = true;
-                            $(this).css('background-color:green');
+                            //$(this).css('background-color:green');
                         }
                         else
                         {
-                            $(this).css('background-color:red');
+                            //$(this).css('background-color:red');
+                            $('<span id="" style="background-color:red"><b>OBS:</b> Personen har ikke forældremyndighed</span><br>').insertAfter($(this));
                         }
 
 
