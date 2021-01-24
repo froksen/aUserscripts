@@ -28,7 +28,7 @@ var debugMode = true;
 
                         //Information about last activity
                         var lastActivity = $(this).text().split(":")[1];
-                        var lastActivityDay = lastActivity.split(" ")[0];
+                        var lastActivityDay = lastActivity.split(" ")[0].replace(".","");
                         var lastActivityMonth = lastActivity.split(" ")[1];
 
                         //AULA MonthNames
@@ -38,10 +38,10 @@ var debugMode = true;
                         var currentDate = new Date();
 
                         //Finds diff
-                        var dateDiff = currentDate.getMonth() - monthNames.indexOf(lastActivityMonth);
+                        //var dateDiff = currentDate.getMonth() - monthNames.indexOf(lastActivityMonth);
                         
                         //TODO: Fix so it can handle change of year. Unable to do as long no year is provided by AULA. 
-                        if(dateDiff < 2 || dateDiff > -2)
+                        if(currentDate.getMonth() == monthNames.indexOf(lastActivityMonth && lastActivityDay-currentDate.getDate() >= 0))
                         {
                             lastActivityIsTooLongAgo = false;
                         }
@@ -53,7 +53,7 @@ var debugMode = true;
                 if(lastActivityIsTooLongAgo)
                 {
                    // console.log("Det er mere end 2 mdr siden personen var på AULA.");
-                    $(this).append('<span id="" style="background-color:yellow"><b>OBS:</b> Det er mere end 2 mdr siden samarbejdspartneren har været aktiv på AULA.</span><br>');
+                    $(this).append('<span id="" style="background-color:yellow"><b>OBS:</b> Det er mere end 1 måned siden samarbejdspartneren har været aktiv på AULA.</span><br>');
 
                 }
 
