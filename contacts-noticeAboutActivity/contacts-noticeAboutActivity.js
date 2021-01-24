@@ -36,15 +36,13 @@ var debugMode = true;
                         
                         //Gets current date
                         var currentDate = new Date();
-                        console.log("lastActivityDay: " + lastActivityDay);
-                        console.log("currentDay: " + currentDate.Date());
-                        console.log("DIFF: " + lastActivityDay-currentDate.Date());
+
 
                         //Finds diff
                         //var dateDiff = currentDate.getMonth() - monthNames.indexOf(lastActivityMonth);
                         
                         //TODO: Fix so it can handle change of year. Unable to do as long no year is provided by AULA. 
-                        if(currentDate.getMonth() == monthNames.indexOf(lastActivityMonth && lastActivityDay-currentDate.getDate() >= 0))
+                        if(currentDate.getMonth() == monthNames.indexOf(lastActivityMonth))
                         {
                             lastActivityIsTooLongAgo = false;
                         }
