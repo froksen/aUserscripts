@@ -3,11 +3,6 @@ var debugMode = true;
 (function() {
     'use strict';
 
-   /* if(window.location.href == "https://www.aula.dk/portal/#/beskeder/opret")
-    {
-        return;
-    }*/
-
     //Venter på elementet bliver synligt, og når synligt afvikler funktionen
     waitForKeyElements(".aula-profile-container",highlightActivity);
 
@@ -26,17 +21,16 @@ var debugMode = true;
                     //If info-line starts with "Har forældremyndighed"
                     if ($(this).text().trim().match("^Har forældremyndighed:")) {
 
-                        //Information about last activity
+                        
                         var custodyInformation = $(this).text().split(":")[1].trim();
                         console.log(custodyInformation);
 
-                        //TODO: Fix so it can handle change of year. Unable to do as long no year is provided by AULA. 
+                        
                         if(custodyInformation.toLowerCase() == "ja")
                         {
                             hasCustody = true;
                         }
                      }
-
                 })
 
                 //Print out information to user. 
