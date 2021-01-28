@@ -27,9 +27,9 @@ var debugMode = true;
                     if ($(this).text().trim().match("^Seneste aktivitet:")) {
 
                         //Information about last activity
-                        var lastActivity = $(this).text().split(":")[1];
-                        var lastActivityDay = lastActivity.split(" ")[0];
-                        var lastActivityMonth = lastActivity.split(" ")[1];
+                        var lastActivity = $(this).text().trim().split(":")[1];
+                        var lastActivityDay = lastActivity.split(" ")[1].replace(".","").trim();
+                        var lastActivityMonth = lastActivity.split(" ")[2];
 
                         //AULA MonthNames
                         var monthNames = ["jan.","feb.","mar.", "apr.","maj", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."];
@@ -37,11 +37,18 @@ var debugMode = true;
                         //Gets current date
                         var currentDate = new Date();
 
+
                         //Finds diff
-                        var dateDiff = currentDate.getMonth() - monthNames.indexOf(lastActivityMonth);
+                        //var dateDiff = currentDate.getMonth() - monthNames.indexOf(lastActivityMonth);
+                        /*console.log(lastActivity);
+                        console.log(lastActivityDay);
+                        console.log(lastActivityDay - currentDate.getDate());
+                        console.log(lastActivityMonth);
+                        console.log(currentDate.getMonth());
+                        console.log(monthNames.indexOf(lastActivityMonth));*/
                         
                         //TODO: Fix so it can handle change of year. Unable to do as long no year is provided by AULA. 
-                        if(dateDiff < 2 || dateDiff > -2)
+                        if(currentDate.getMonth() == monthNames.indexOf(lastActivityMonth))
                         {
                             lastActivityIsTooLongAgo = false;
                         }
@@ -53,7 +60,7 @@ var debugMode = true;
                 if(lastActivityIsTooLongAgo)
                 {
                    // console.log("Det er mere end 2 mdr siden personen var på AULA.");
-                    $(this).append('<span id="" style="background-color:yellow"><b>OBS:</b> Det er mere end 2 mdr siden samarbejdspartneren har været aktiv på AULA.</span><br>');
+                    $(this).append('<span id="" style="background-color:yellow"><b>OBS:</b> Det er mere end 1 måned siden samarbejdspartneren har været aktiv på AULA.</span><br>');
 
                 }
 
