@@ -21,9 +21,9 @@ var debugMode = true;
 
                     //If line matches regexp (address) then save it to array
                     var str = $(this).text().trim();
-                    var patt = new RegExp(".* \d*, \d* .*");
+                    //var patt = new RegExp(".* \d*,*\d*, \d* .*");
                     
-                    if (str.match(/.* \d*, \d* .*/g)) {
+                    if (str.match(/.* \d*,*\d*, \d* .*/g)) {
                         contactsAddresses.push($(this));
                      }
 
@@ -43,7 +43,10 @@ var debugMode = true;
                 //Print out information to user. 
                 if(hasDifferntAddress)
                 {
-                    $('<span id="" style="background-color:yellow"><b>OBS:</b> En eller flere personer har forskellige adresser!</span><br>').insertAfter(".contact-info-title");
+                    if(!$("#alertDifferentAddresses").length)
+                    {
+                        $('<span id="alertDifferentAddresses" style="background-color:yellow;width=500px"><b>OBS:</b> En eller flere personer har forskellige adresser!</span><br>').insertAfter(".contact-info-title");
+                    }
 
                 }
               },2000);
