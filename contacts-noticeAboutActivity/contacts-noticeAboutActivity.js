@@ -36,7 +36,13 @@ var debugMode = true;
                         
                         //Gets current date
                         var currentDate = new Date();
+                        var date2 = new Date(currentDate.getFullYear(),lastActivityMonth-1,lastActivityDay,0,0,0);
 
+                        // To calculate the time difference of two dates
+                        var Difference_In_Time = date2.getTime() - date1.getTime();
+                        
+                        // To calculate the no. of days between two dates
+                        var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
                         //Finds diff
                         //var dateDiff = currentDate.getMonth() - monthNames.indexOf(lastActivityMonth);
@@ -48,10 +54,11 @@ var debugMode = true;
                         console.log(monthNames.indexOf(lastActivityMonth));*/
                         
                         //TODO: Fix so it can handle change of year. Unable to do as long no year is provided by AULA. 
-                        if(currentDate.getMonth() == monthNames.indexOf(lastActivityMonth))
-                        {
-                            lastActivityIsTooLongAgo = false;
-                        }
+                        if(Difference_In_Days >= 14)
+                        //if(currentDate.getMonth() == monthNames.indexOf(lastActivityMonth))
+                        //{
+                         //   lastActivityIsTooLongAgo = false;
+                        //}
                      }
 
                 })
@@ -60,7 +67,7 @@ var debugMode = true;
                 if(lastActivityIsTooLongAgo)
                 {
                    // console.log("Det er mere end 2 mdr siden personen var på AULA.");
-                   $(('<span id="" style="background-color:yellow"><b>OBS:</b> Det er mere end 1 måned siden samarbejdspartneren har været aktiv på AULA.</span><br>')).insertBefore($(this).prev());
+                   $(('<span id="" style="background-color:yellow"><b>OBS:</b> Det er mere end 14 dage siden samarbejdspartneren har været aktiv på AULA.</span><br>')).insertBefore($(this).prev());
                     //$(this).append('<span id="" style="background-color:yellow"><b>OBS:</b> Det er mere end 1 måned siden samarbejdspartneren har været aktiv på AULA.</span><br>');
 
                 }
