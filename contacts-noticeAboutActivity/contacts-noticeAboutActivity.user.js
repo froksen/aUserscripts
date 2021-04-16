@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AULA - Kontakter - Gør opmærksom på hvis det er langtid siden en kontakt har været aktiv på AULA
 // @namespace
-// @version      0.4
+// @version      0.5
 // @description  Gør opmærksom på hvis det er langtid siden en kontakt har været aktiv på AULA
 // @author       Ole Frandsen (OF)
 // @match        https://www.aula.dk/portal/*

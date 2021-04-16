@@ -13,6 +13,8 @@ var debugMode = true;
 
     function highlightActivity()
     {
+        console.log("RUNNING");
+
         setTimeout(
             function(){
                 //Finds all user profiles
@@ -33,28 +35,38 @@ var debugMode = true;
 
                         //AULA MonthNames
                         var monthNames = ["jan.","feb.","mar.", "apr.","maj", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."];
+                        console.log("DADA");
                         
+                        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+
                         //Gets current date
                         var currentDate = new Date();
-                        var date2 = new Date(currentDate.getFullYear(),lastActivityMonth-1,lastActivityDay,0,0,0);
+                        var date2 = new Date(currentDate.getFullYear(),monthNames.indexOf(lastActivityMonth),parseInt(lastActivityDay),0,0,0);
 
                         // To calculate the time difference of two dates
-                        var Difference_In_Time = date2.getTime() - date1.getTime();
                         
                         // To calculate the no. of days between two dates
-                        var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+                        var Difference_In_Days =  Math.round(Math.abs((currentDate - date2) / oneDay));
+
 
                         //Finds diff
                         //var dateDiff = currentDate.getMonth() - monthNames.indexOf(lastActivityMonth);
-                        /*console.log(lastActivity);
-                        console.log(lastActivityDay);
-                        console.log(lastActivityDay - currentDate.getDate());
+                        //console.log(lastActivity);
+                        //console.log(lastActivityDay);
+                        /*console.log(lastActivityDay - currentDate.getDate());
                         console.log(lastActivityMonth);
                         console.log(currentDate.getMonth());
                         console.log(monthNames.indexOf(lastActivityMonth));*/
                         
                         //TODO: Fix so it can handle change of year. Unable to do as long no year is provided by AULA. 
-                        if(Difference_In_Days >= 14)
+                        console.log("DIFF: ");
+                        console.log(Difference_In_Days);
+                        //console.log(currentDate.getFullYear());
+                        //console.log(monthNames.indexOf(lastActivityMonth)-1);
+                        //console.log(parseInt(lastActivityDay))
+                        if(Difference_In_Days <= 14){
+                            lastActivityIsTooLongAgo = false;
+                        }
                         //if(currentDate.getMonth() == monthNames.indexOf(lastActivityMonth))
                         //{
                          //   lastActivityIsTooLongAgo = false;
