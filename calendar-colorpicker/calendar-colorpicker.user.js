@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         (UDVIKLING) AULA - Kalender - Farvevælger
+// @name         AULA - Kalender - Farvevælger
 // @namespace
-// @version      0.1
+// @version      0.2
 // @description  Gør det muligt, at vælge forskellig farve på kalenderbrikker.
 // @author       Ole Frandsen (OF)
 // @match        https://www.aula.dk/portal/*
