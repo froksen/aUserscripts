@@ -13,12 +13,12 @@
     function createHeaderLinks()
     {
       setTimeout(function(){
-        $(".card-body").find(".post-title").each(function( index ) {
+        $(".card-body").find(".posts-title").each(function( index ) {
           console.log($(this).attr("data-id"));
           console.log( index + ": " + $( this ).text() );
 
           var postTitle = $( this ).text();
-          var dataId = $(this).attr("data-id");
+          var dataId = $(this).parent().attr("data-id");
           $(this).html('<a href="'+"https://www.aula.dk/portal/#/overblik/"+dataId+'">'+postTitle+'</a>');
         });
 
