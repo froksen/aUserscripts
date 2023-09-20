@@ -7,16 +7,78 @@
     addExportButton
     );
 
+
     //Adds export btn to popup
    function addExportButton()
     {
      $( ".popover-footer" ).append('<button id="exportIcsBtn" type="button" class="btn btn-link btn-sm"><a aria-label="Eksporter til outlook" class="button-text"><i class="icon-Aula_note"></i> Eksporter til outlook</a></button>' );
 
+
+
      $("#exportIcsBtn").click(function(){
-         var dates = getEventDates();
-         var timestamps = getEventTime();
-         var title = getEventTitle();
-         var invited = getInvited();
+      console.log("CLICK");
+
+      //var xhttp = new XMLHttpRequest();
+      //xmlhttp.open('GET', 'process.php?users=' + encodeURIComponent(users) + '&messege=' + encodeURIComponent(messege), true);
+
+      var response_data;
+
+      const queryString = window.location.search;
+console.log( window.location.href);
+console.log(window.location.href.split("https://www.aula.dk/portal/#/kalender/begivenhed/"))
+
+      var event_id = window.location.href.split("https://www.aula.dk/portal/#/kalender/begivenhed/")[1];
+
+      GM_xmlhttpRequest ( {
+        method:     "GET",
+        url:        "https://www.aula.dk/api/v17/?method=calendar.getEventById&eventId="+event_id,
+        data:       null,//"image64=" + encodeURIComponent (img64),
+        headers:    {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        onload:     function (response) {
+            console.log ("gut response");
+            console.log(response);
+
+            //Sikre, at der er positivt respons på forespørgslen
+            if (this.readyState == 4) {
+              if (this.status == 200 ) {
+                
+                //Laver respons om til JSON
+                var response_json = JSON.parse(this.responseText)
+                console.log(response_json)
+    
+                //Hvis statuskoden er 0, da er alt godt.
+                if (response_json["status"]["code"] == 0) {
+                  console.log("SUCCESSFULL")
+                  
+                  response_data = response_json["data"];
+                  createICS(response_data);
+                  //response_json["status"]["message"]
+                }
+                else {
+                  console.log("Unsuccessful")
+                  response_json["status"]["message"]
+                  return;
+                }
+              }
+            }
+
+          }
+        } );
+        
+         
+     })
+    }
+
+    function createICS(response_data)
+    {
+      var startDate = getEventDates(response_data["startDateTime"]);
+         var endDate = getEventDates(response_data["endDateTime"]);
+         var startTime = getEventTime(response_data["startDateTime"]);
+         var endTime = getEventTime(response_data["endDateTime"]);
+         var title = response_data["title"];
+         var invited = getInvited(response_data["invitees"]);
 
          var currentdate = new Date();
          var datetime = "Information hentet fra AULA: " + currentdate.getDate() + "/"
@@ -31,8 +93,8 @@
          console.log("-*-*-*FOUND EVENT INFORMATION");
          console.log(datetime)
          console.log("TITLE: " + title);
-         console.log("START DATE/TIME: " + dates[0] + " kl." + timestamps[0]);
-         console.log("END DATE/TIME: " + dates[1] + " kl."+ timestamps[1]);
+         console.log("START DATE/TIME: " + startDate + " kl." + startTime);
+         console.log("END DATE/TIME: " + endDate + " kl."+ endTime);
          console.log("Participants");
          console.log(invited[0]);
          console.log(invited[1]);
@@ -41,10 +103,19 @@
 
 
          var cal = ics();
-         cal.addEvent(title, datetime + "\\n Deltagere: " + invited[0] + "\\n\\n Mangler svar: " + invited[2] + "\\n\\n Deltager ikke: " + invited[1], "", dates[0] + " " + timestamps[0], dates[1] + " " + timestamps[1]);
+         cal.addEvent(title, datetime + "\\n Inviterede: " + invited, "", startDate + "Z" + " " + startTime, endDate + " " + endTime + "Z");
          //cal.addEvent('New Years', 'Watch the ball drop!', 'New York', '01/01/2016', '01/01/2016');
          cal.download(title);
-     })
+    }
+
+    function getEventDateTime(aula_json_string)
+    {
+      var day;
+      var month;
+      var year;
+      var hour;
+      var minute;
+      var seconds;
     }
 
     //Gets the events title from Popup
@@ -54,8 +125,18 @@
     }
 
     //Gets the Event time (Start and end)
-    function getEventTime()
+    function getEventTime(aula_date_time)
     {
+      //"2023-09-12T10:55:00+00:00"
+      console.log("OPRINDELIG");
+      console.log(aula_date_time);
+
+      var tSplit_full_time = aula_date_time.split("T") //Skulle give 10:55:00+00:00
+      var time_without_timezone = tSplit_full_time[1].split("+")[0] //Skulle give 10:55:00
+
+      return time_without_timezone
+
+      return;
         var contentText = $(".popover-main-content").text();
         //const regex = RegExp('\s*Kl.\s\d\d:\d\d\s-\s\d\d:\d\d'); //Should work, but doesnt - TODO.
         var timestamp = false;
@@ -63,12 +144,12 @@
         //Goes through every line, and finds if the line contains timestamp
         var lines = contentText.split("\n");
         $.each(lines, function(n, elem) {
-            elem = elem.trim();
+            elem = elem.toString().trim();
             console.log(n.toString() + " " + elem);
             //If line starts with Kl. then timestamp
-            if(elem.startsWith("Kl."))
+            if(elem.toString().trim().startsWith("Kl."))
             {
-                timestamp = elem;
+                timestamp = elem.toString().trim();
                 console.log("Timestamp found in line nr " + n.toString() + " containing: " + elem);
             }
           });
@@ -125,8 +206,16 @@
         return year+"/"+month+"/"+day;
     }
 
-    function getEventDates()
+    function getEventDates(aula_date_time)
     {
+      //"2023-09-12T10:55:00+00:00"
+
+      var date_with_out_time = aula_date_time.split("T")[0] //Skulle give 2023-09-12
+
+      return date_with_out_time
+
+
+      return;
         var contentText = $(".popover-main-content").text();
         var dates = false;
         var startDate = "";
@@ -157,9 +246,18 @@
         return [startDate,endDate];
     }
 
-    function getInvited()
+    function getInvited(invities_list)
     {
-        var startPos = $(".popover-content");
+      var all_invited = ""
+       $.each(invities_list, function(n, elem){
+          var new_item = elem["instProfile"]["fullName"];
+          all_invited = all_invited + new_item + ",";
+       }); 
+
+       return all_invited 
+      
+      return;
+      var startPos = $(".popover-content");
         var rows = startPos.find("div.row");
         var participating = rows.eq(0).text().replace("Deltagere","").trim();
         var not_participating = rows.eq(1).text().replace("Deltager ikke","").trim();
