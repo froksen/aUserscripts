@@ -103,7 +103,7 @@ console.log(window.location.href.split("https://www.aula.dk/portal/#/kalender/be
 
 
          var cal = ics();
-         cal.addEvent(title, datetime + "\\n Inviterede: " + invited, "", startDate + "Z" + " " + startTime, endDate + " " + endTime + "Z");
+         cal.addEvent(title, datetime + "\\n Inviterede: " + invited + "\\n\\n Link til AULA begivenheden:" + window.location.href, "", startDate + "Z" + " " + startTime, endDate + " " + endTime + "Z");
          //cal.addEvent('New Years', 'Watch the ball drop!', 'New York', '01/01/2016', '01/01/2016');
          cal.download(title);
     }
